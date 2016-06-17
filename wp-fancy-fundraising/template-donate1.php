@@ -110,7 +110,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
       }
       body {
         background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbg'); ?>;
-        background-image: url('<?php echo get_theme_mod('fancyfundraising_bgimg_form'); ?>');
+        background-image: url('<?php echo get_theme_mod('fancyfundraising_bgimg_form'); ?>') !important;
       }
       footer {
         background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbgfooter'); ?>;
