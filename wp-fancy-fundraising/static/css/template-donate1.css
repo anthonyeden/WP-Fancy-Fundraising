@@ -29,6 +29,9 @@ header {
 .main {
     background-color: #FFF;
 }
+.page-content {
+    min-height: 90vh;
+}
 
 footer {
     width: 100%;
