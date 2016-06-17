@@ -236,7 +236,7 @@ class WPFancyFundraising {
         $wp_customize->add_setting(
             'fancyfundraising_colour_formbgheadertransparent',
             array(
-                'default'    => true,
+                'default'    => false,
                 'transport'  => 'postMessage',
             )
         );
