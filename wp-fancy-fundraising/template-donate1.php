@@ -44,7 +44,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
     <?php if(get_theme_mod('fancyfundraising_form_logo', '') !== '') { ?>
     <header>
       <div class="row">
-        <img src="<?php echo get_theme_mod('fancyfundraising_form_logo'); ?>" />
+        <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_mod('fancyfundraising_form_logo'); ?>" /></a>
       </div>
     </header>
     <?php } ?>
