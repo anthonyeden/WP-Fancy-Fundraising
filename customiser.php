@@ -232,5 +232,20 @@ class WPFancyFundraising_Customiser {
             'type'       => 'checkbox'
         ) );
 
+        $wp_customize->add_setting(
+            'fancyfundraising_form_btnpressonce',
+            array(
+                'default'    => false,
+                'transport'  => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_control( 'fancyfundraising_form_btnpressonce', array(
+            'label'      => 'Donation Button - Press Once',
+            'section'    => 'fancyfundraising_donationtemplate_options',
+            'settings'   => 'fancyfundraising_form_btnpressonce',
+            'type'       => 'checkbox'
+        ) );
+
     }
 }

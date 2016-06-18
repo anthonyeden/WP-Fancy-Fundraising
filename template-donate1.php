@@ -87,6 +87,24 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
         function gform_format_option_label( fullLabel, fieldLabel, priceLabel, selectedPrice, price, formId, fieldId ) { 
             return fieldLabel;
         }
+
+        <?php if(get_theme_mod('fancyfundraising_form_btnpressonce')) { ?>
+        
+        // Only allow the buttons to be pressed once (not always necessary, but some people like it.)
+        // From https://snippets.webaware.com.au/snippets/stop-users-from-submitting-gravity-forms-form-twice/
+        jQuery(document).ready(function() {
+          var gformAlreadySubmitted = false;
+          jQuery(".gform_wrapper form").submit(function(event) {
+              if (gformAlreadySubmitted) {
+                  event.preventDefault();
+              } else {
+                  gformAlreadySubmitted = true;
+                  jQuery("input[type='submit']", this).val("Processing, please wait...");
+              }
+          });
+        });
+        <?php } ?>
+
     </script>
 
     <?php
