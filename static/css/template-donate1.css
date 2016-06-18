@@ -217,6 +217,36 @@ small {
     width: 49%;
 }
 
+/* Classes to turn radio buttons into real buttons */
+.gform_wrapper .radio-button-buttons input[type="radio"] {
+    display: none;
+}
+.gform_wrapper .radio-button-buttons :not(.field_label) label {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    color: #000;
+    border-radius: 5px;
+    background-color: #DDD;
+    border-bottom: 3px solid #555;
+}
+.gform_wrapper .radio-button-buttons ul li {
+    display: inline-block;
+    width: 49%;
+    margin-right: 2%;
+    left: 0;
+}
+.gform_wrapper .radio-button-buttons ul li:nth-child(even) {
+    margin-right: 0;
+    width: 49%;
+}
+.gform_wrapper .radio-button-buttons li:hover label {
+    background-color: #CCC;
+}
+.gform_wrapper .radio-button-buttons li label.active {
+    background-color: #AAA;
+}
+
 /* Columns only display for medium and up */
 @media only screen and (min-width: 40em) {
 	.gform_wrapper form.three-column .gform_fields:first-child {
