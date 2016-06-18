@@ -247,5 +247,21 @@ class WPFancyFundraising_Customiser {
             'type'       => 'checkbox'
         ) );
 
+        $wp_customize->add_setting(
+            'fancyfundraising_form_hidecardicons',
+            array(
+                'default'    => false,
+                'transport'  => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_control( 'fancyfundraising_form_hidecardicons', array(
+            'label'      => 'Hide Card Icons',
+            'section'    => 'fancyfundraising_donationtemplate_options',
+            'settings'   => 'fancyfundraising_form_hidecardicons',
+            'type'       => 'checkbox',
+            'description' => 'Hides the credit-card icons from the form (only applies to Gravity Forms)',
+        ) );
+
     }
 }

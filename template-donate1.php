@@ -89,7 +89,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
         }
 
         <?php if(get_theme_mod('fancyfundraising_form_btnpressonce')) { ?>
-        
+
         // Only allow the buttons to be pressed once (not always necessary, but some people like it.)
         // From https://snippets.webaware.com.au/snippets/stop-users-from-submitting-gravity-forms-form-twice/
         jQuery(document).ready(function() {
@@ -152,6 +152,13 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
         }
         ?>
       }
+      <?php if(get_theme_mod('fancyfundraising_form_hidecardicons') == true) { ?>
+
+      .gform_card_icon_container {
+        display: none;
+      }
+
+      <?php } ?>
     </style>
   </body>
 </html>
