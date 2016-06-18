@@ -148,7 +148,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
         color: <?php echo get_theme_mod('fancyfundraising_colour_formbtntext'); ?>;
       }
       .button:hover {
-        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbtnbghover'); ?>;
+        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbtnbghover'); ?> !important;
       }
       header {
         <?php if(get_theme_mod('fancyfundraising_colour_formbgheadertransparent') == true) {
