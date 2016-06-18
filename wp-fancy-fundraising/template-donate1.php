@@ -44,7 +44,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
     <?php if(get_theme_mod('fancyfundraising_form_logo', '') !== '') { ?>
     <header>
       <div class="row">
-        <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_mod('fancyfundraising_form_logo'); ?>" /></a>
+        <a href="<?php echo get_site_url(); ?>"><img src="<?php echo str_replace("http://", "https://", get_theme_mod('fancyfundraising_form_logo')); ?>" /></a>
       </div>
     </header>
     <?php } ?>
@@ -110,7 +110,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
       }
       body {
         background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbg'); ?>;
-        background-image: url('<?php echo get_theme_mod('fancyfundraising_bgimg_form'); ?>') !important;
+        background-image: url('<?php echo str_replace("http://", "https://", get_theme_mod('fancyfundraising_bgimg_form')); ?>') !important;
       }
       footer {
         background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbgfooter'); ?>;
