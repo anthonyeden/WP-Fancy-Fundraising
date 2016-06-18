@@ -78,7 +78,8 @@ class BFIGitHubPluginUpdater {
             }
 
             $obj = new stdClass();
-            $obj->slug = $this->slug;
+            $obj->slug = substr($this->slug, 0, strpos($this->slug, "/"));
+            $obj->plugin = $this->slug;
             $obj->new_version = $this->githubAPIResult->tag_name;
             $obj->url = $this->pluginData["PluginURI"];
             $obj->package = $package;
@@ -95,13 +96,14 @@ class BFIGitHubPluginUpdater {
         $this->getRepoReleaseInfo();
 
         // If nothing is found, do nothing
-        if ( empty( $response->slug ) || $response->slug != $this->slug ) {
+        if ( empty( $response->slug ) || $response->slug != substr($this->slug, 0, strpos($this->slug, "/")) ) {
             return false;
         }
 
         // Add our plugin information
         $response->last_updated = $this->githubAPIResult->published_at;
-        $response->slug = $this->slug;
+        $response->slug = substr($this->slug, 0, strpos($this->slug, "/"));
+        $response->plugin = $this->slug;
         $response->plugin_name  = $this->pluginData["Name"];
         $response->version = $this->githubAPIResult->tag_name;
         $response->author = $this->pluginData["AuthorName"];
