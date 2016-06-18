@@ -26,6 +26,12 @@ class WPFancyFundraising {
         // Customise the special templates as if they're part of the regular theme!
         add_action('customize_register',                            array($this, 'customize_register'));
         
+        // Code to update this plugin via GitHub
+        if (is_admin()) {
+            require_once( 'BFIGitHubPluginUploader.php' );
+            new BFIGitHubPluginUpdater(__FILE__, 'anthonyeden', "wp-fancy-fundraising");
+        }
+
     }
 
     public function register_project_templates($atts) {
