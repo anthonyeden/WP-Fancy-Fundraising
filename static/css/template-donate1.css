@@ -123,14 +123,33 @@ small {
 .gform_wrapper label.gfield_label+div.ginput_container {
     margin-top: 0 !important;
 }
-.gform_button {
+.gform_wrapper .gform_button {
+    padding: 15px 40px;
     font-size: 1.2em;
     font-weight: bold;
     color: #00529b;
     color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    text-transform: uppercase;
+    margin: 0 auto;
+    display: block !important;
+    position: relative;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .3),  inset 0px -3px 1px 1px rgba(204, 198, 197, .5);
 }
-.gform_button:hover {
+.gform_wrapper .gform_button:hover {
     background-color: #00529b;
+}
+.gform_wrapper .gform_button:after {
+    color:#e9e6e4;
+    content: "";
+    display: block;
+    font-size: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+    position: absolute;
+    width: 30px;
 }
 .gform_wrapper input {
     margin: 0;
@@ -159,11 +178,6 @@ small {
 }
 .gform_wrapper .field-heading.gfield.gfield_creditcard_warning {
     margin-top: 0 !important;
-}
-.gform_wrapper .gform_button {
-    width: 80%;
-    margin: 0 auto;
-    display: block !important;
 }
 .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
 .gform_wrapper li.gfield_html,
