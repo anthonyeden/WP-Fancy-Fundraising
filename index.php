@@ -41,6 +41,9 @@ class WPFancyFundraising {
         // Special page templates
         $this->pagetemplates = array('template-donate1.php' => 'Fancy Fundraising - Simple Donation Page');
 
+        // Shortcodes for tally bars and other embeddable elements
+        add_shortcode('fancyfundraising_tallybar1',                 array( $this, 'sc_tallybar1') );
+
         // Customise the special templates as if they're part of the regular theme!
         require('customiser.php');
         $this->customiser = New WPFancyFundraising_Customiser();
@@ -139,6 +142,39 @@ class WPFancyFundraising {
         }
 
         return $content;
+    }
+
+    public function sc_tallybar1($atts) {
+        // This Shortcode embeds a tally bar within the site's content.
+
+        $a = shortcode_atts(array(
+            'logo' => '',
+            'bgimg' => '',
+            'bgcol' => '#E3C7B9',
+            'color' => '#FFF',
+            'line1' => '',
+            'line2' => '',
+            'min-height' => '150px',
+            'button_text' => 'Donate Now',
+            'button_url' => '/donate/',
+            'button_bgcolor' => '#003A9B',
+            'button_bgcolorhover' => '#00529B',
+            'button_textcolor' => '#FFF',
+         ), $atts);
+        
+        // We can now embed shortcodes within shortcode attributes!
+        $a['line1'] = do_shortcode(str_replace(array("{", "}"), array("[", "]"), $a['line1']));
+        $a['line2'] = do_shortcode(str_replace(array("{", "}"), array("[", "]"), $a['line2']));
+
+        // Ensure the ".foundation" namespaced version is added to the page (callin this here will load it in the footer)
+        wp_enqueue_style("foundation-namespaced", plugin_dir_url( __FILE__ ) . "static/css/foundation-namespaced.min.css");
+
+        ob_start();
+        require("section-tallybar1.php");
+        $return = ob_get_clean();
+        
+        return $return;
+
     }
 
 }
