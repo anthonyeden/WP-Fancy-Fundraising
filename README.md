@@ -3,7 +3,9 @@
 # WP Fancy Fundraising
 A Wordpress Plugin that allows you to easily create a good-looking donation experience on your website. This plugin creates a page template purpose-built for donation forms, and provides a series of styles and options to configure your experience.
 
-In the future, this plugin will also provide site-wide elements for live tallies, buttons, and more!
+You can also create a simple Tally Bar to remind donors of your current tally, the remaining need, and prompt them to give.
+
+In the future, this plugin will also provide more site-wide elements such as more complex live tallies, buttons, and more!
 
 ## How to setup a donation form
 
@@ -22,6 +24,18 @@ To apply the Fancy Fundraising style to a donation form:
  * ![Wordpress Customiser Screenshot](http://mediarealm.com.au/wp-content/uploads/2016/06/Fancy-Fundraising-Screenshot-Customiser.png)
 
 You can also set a featured image on each specific page and have it appear at the top of the donation page.
+
+## How to setup a Tally Bar
+
+![Tally Bar - Style 1 - Screenshot](http://mediarealm.com.au/wp-content/uploads/2016/06/FancyFundraising-TallyBar1-Screenshot1.png)
+
+To create a Tally Bar like the one above (using your own graphics, text and colours), embed the following shortcode in a page, post or HTML widget and customise the settings.
+
+> [fancyfundraising_tallybar1 min-height="150px" logo="/path/to/logo.png" bgimg="/path/to/background.jpg" bgcol="#694CC4" color="#AF0000" line1="Current Tally: {pftally_dollarscurrent} / {pftally_dollarsgoal}" line2="We Still Need Your Support! {pftally_dollarsremaining} to go!"]
+
+You can embed other shortcodes within the attributes by replacing square brackets with curly brackets (e.g. replace [ with { within the attributes).
+
+This Tally Bar is fully responsive, and embeds portions of the Zurb Foundation 6 framework in a special low-conflict mode.
 
 ## Gravity Form Styling
 
