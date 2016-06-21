@@ -3,7 +3,7 @@
 Plugin Name: WP Fancy Fundraising
 Plugin URI: http://mediarealm.com.au/
 Description: Layout tweaks and widgets for Fundraising with Wordpress
-Version: 1.0.6
+Version: 1.0.8
 
 Author: Media Realm
 Author URI: http://www.mediarealm.com.au/
