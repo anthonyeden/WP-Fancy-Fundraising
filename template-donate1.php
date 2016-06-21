@@ -105,7 +105,7 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
         });
         <?php } ?>
 
-        jQuery('.radio-button-buttons li label').first().addClass("active");
+        jQuery('.radio-button-buttons li input:checked').parent("li").children("label").addClass("active");
         jQuery('.radio-button-buttons li label').on('click touchstart', function(){
             jQuery('.radio-button-buttons li label').removeClass("active");
             jQuery(this).addClass("active");
