@@ -1,7 +1,7 @@
 ![Fancy Fundraising - Wordpress Plugin](http://mediarealm.com.au/wp-content/uploads/2016/06/Fancy-Fundraising-LogoFull.jpg)
 
-# WP Fancy Fundraising
-A Wordpress Plugin that allows you to easily create a good-looking donation experience on your website. This plugin creates a page template purpose-built for donation forms, and provides a series of styles and options to configure your experience.
+# [WP Fancy Fundraising](http://mediarealm.com.au/wordpress-plugins/fancy-fundraising/)
+A Wordpress Plugin that allows you to easily create a good-looking donation experience on your website. This plugin creates a page template purpose-built for donation forms, and provides a series of styles and options to configure your experience. [Visit our official website](http://mediarealm.com.au/wordpress-plugins/fancy-fundraising/).
 
 You can also create a simple Tally Bar to remind donors of your current tally, the remaining need, and prompt them to give.
 
