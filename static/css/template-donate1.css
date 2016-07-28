@@ -241,6 +241,9 @@ small {
     margin-right: 2%;
     left: 0;
 }
+.gform_wrapper .radio-button-buttons ul li label {
+    width: 100%;
+}
 .gform_wrapper .radio-button-buttons ul li:nth-child(even) {
     margin-right: 0;
     width: 49%;
