@@ -130,38 +130,38 @@ add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 
     <style>
       .gform_wrapper .gform_body h3,
       .gform_wrapper .gform_body .field-heading label.gfield_label {
-        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formcolumnheading'); ?>;
+        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formcolumnheading'); ?> !important;
       }
       body {
-        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbg'); ?>;
+        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbg'); ?> !important;
         background-image: url('<?php echo ($_SERVER["HTTPS"] == "on" ? str_replace("http://", "https://", get_theme_mod('fancyfundraising_bgimg_form')) : get_theme_mod('fancyfundraising_bgimg_form')); ?>') !important;
       }
       footer {
-        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbgfooter'); ?>;
+        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbgfooter'); ?> !important;
       }
       footer a,
       footer a:hover {
-        color: <?php echo get_theme_mod('fancyfundraising_colour_formfootertext'); ?>;
+        color: <?php echo get_theme_mod('fancyfundraising_colour_formfootertext'); ?> !important;
       }
       .button {
-        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbtnbg'); ?>;
-        color: <?php echo get_theme_mod('fancyfundraising_colour_formbtntext'); ?>;
+        background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbtnbg'); ?> !important;
+        color: <?php echo get_theme_mod('fancyfundraising_colour_formbtntext'); ?> !important;
       }
       .button:hover {
         background-color: <?php echo get_theme_mod('fancyfundraising_colour_formbtnbghover'); ?> !important;
       }
       header {
         <?php if(get_theme_mod('fancyfundraising_colour_formbgheadertransparent') == true) {
-          echo "background-color: transparent;\n";
+          echo "background-color: transparent !important;\n";
         } else {
-          echo "background-color: " . get_theme_mod('fancyfundraising_colour_formbgheader') . ";\n";
+          echo "background-color: " . get_theme_mod('fancyfundraising_colour_formbgheader') . " !important;\n";
         }
         ?>
       }
       <?php if(get_theme_mod('fancyfundraising_form_hidecardicons') == true) { ?>
 
       .gform_card_icon_container {
-        display: none;
+        display: none !important;
       }
 
       <?php } ?>
