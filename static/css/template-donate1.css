@@ -224,7 +224,7 @@ small {
 
 /* Classes to turn radio buttons into real buttons */
 .gform_wrapper .radio-button-buttons input[type="radio"] {
-    display: none;
+    display: none !important;
 }
 .gform_wrapper .radio-button-buttons :not(.field_label) label {
     text-align: center;
