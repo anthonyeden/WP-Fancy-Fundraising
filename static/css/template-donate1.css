@@ -36,6 +36,8 @@ header {
 }
 .page-content {
     min-height: 90vh;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 footer {
