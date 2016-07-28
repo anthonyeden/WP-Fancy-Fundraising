@@ -5,6 +5,11 @@ body {
     background-position: center center;
 }
 
+body:before,
+body:after {
+    display: none !important; /* Twenty Sixteen Theme Compatibility */
+}
+
 .row {
     /* Make the main container a bit smaller than the Foundation default  */
     max-width: 60rem;
