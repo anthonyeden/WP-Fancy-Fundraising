@@ -36,7 +36,7 @@ class WPFancyFundraising {
         // Add special page templates
         add_filter('page_attributes_dropdown_pages_args',           array( $this, 'register_project_templates' ) );
         add_filter('wp_insert_post_data',                           array( $this, 'register_project_templates' ) );
-        add_filter('template_include',                              array( $this, 'view_project_template') );
+        add_filter('template_include',                              array( $this, 'view_project_template'), get_theme_mod('fancyfundraising_template_filterpriority', 10) );
 
         // Special page templates
         $this->pagetemplates = array('template-donate1.php' => 'Fancy Fundraising - Simple Donation Page');

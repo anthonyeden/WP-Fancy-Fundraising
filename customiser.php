@@ -263,5 +263,21 @@ class WPFancyFundraising_Customiser {
             'description' => 'Hides the credit-card icons from the form (only applies to Gravity Forms)',
         ) );
 
+        $wp_customize->add_setting(
+            'fancyfundraising_template_filterpriority',
+            array(
+                'default'    => '10',
+                'transport'  => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_control( 'fancyfundraising_template_filterpriority', array(
+            'label'      => 'Template Filter Priority',
+            'section'    => 'fancyfundraising_donationtemplate_options',
+            'settings'   => 'fancyfundraising_template_filterpriority',
+            'type'       => 'number',
+            'description' => 'Set this to a higher number if the template is being hijacked by another plugin or theme.',
+        ) );
+
     }
 }
