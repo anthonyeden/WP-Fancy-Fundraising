@@ -128,7 +128,7 @@ small {
     display: block;
 }
 .gform_wrapper .ginput_card_expiration_container select {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 .gform_wrapper .ginput_card_expiration_container label {
     padding-bottom: 1em;
