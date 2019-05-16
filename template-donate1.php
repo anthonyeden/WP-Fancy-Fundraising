@@ -14,6 +14,21 @@ if(get_theme_mod('fancyfundraising_form_fixssl') == true) {
   add_filter('style_loader_src',        array('WPFancyFundraising', 'fixHTTPSUrl'));
 }
 
+add_action('wp_enqueue_scripts', function() {
+  // De-register theme styles
+  global $wp_styles;
+
+  if(is_a($wp_styles, 'WP_Styles')) {
+    foreach( $wp_styles->queue as $name ) {
+      if(isset($wp_styles->registered[$name]) && strpos($wp_styles->registered[$name]->src, "/themes/") !== false) {
+        wp_dequeue_style($name);
+        wp_deregister_style($name);
+      }
+    }
+  }
+
+}, 999);
+
 // Filter to create columns (form needs class 'two-column' or 'three-column' class and section-breaks need 'gform_column')
 add_filter('gform_field_content',     array('WPFancyFundraising', 'gf_column'), 10, 5);
 
