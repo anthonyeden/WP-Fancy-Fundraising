@@ -97,6 +97,10 @@ class WPFancyFundraising {
 
         global $post;
 
+        if(!isset($post)) {
+            return $template;
+        }
+
         if (!isset($this->pagetemplates[get_post_meta( $post->ID, '_wp_page_template', true)] ) ) {
             return $template;
         }
